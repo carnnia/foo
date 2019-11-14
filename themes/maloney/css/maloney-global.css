@@ -1,0 +1,891 @@
+/************************************************************
+MALONEY CYCLE 11
+************************************************************/
+
+#block-boxes-cng-social-media-fa-medium {
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+#block-search-form #edit-submit {
+	border-radius: 0;
+	text-shadow:none;
+	border: 0;
+	height: 28px;
+}
+
+#block-search-form {
+	background: none repeat scroll 0 0 #2C89C6;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.not-front #block-search-form {
+	background: none repeat scroll 0 0 #2C89C6;
+    border-radius: 5px;
+    margin-bottom: 15px;
+	margin-top: 24px;
+	width:95%;
+}
+
+
+
+#region-user-second {
+	margin-left: 0;
+    margin-right: 0;
+}
+
+
+/*    PAGE HEADERS    */
+
+
+#breadcrumb, #breadcrumb a {
+    font-size: 16px;
+	margin-top:0;
+	position: relative;
+    z-index: 900;
+}
+
+h1#page-title {
+    color: #2785c5;
+    font-family: arial,sans-serif;
+    font-size: 3em;
+    letter-spacing: 0.1px;
+}
+.not-front #zone-content {
+    /*padding-top: 60px;*/
+}
+.not-front h1#page-title {
+    color: #2785c5;
+    font-family: arial,sans-serif;
+    font-size: 3em;
+    letter-spacing: 0.1px;
+    margin-top: 5px;
+}
+
+.not-front #region-content .block h3 {
+    color: #515151;
+    font-family: arial,sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+}
+
+.not-front #region-content .block h2 {
+    color: #515151;
+    font-family: arial,sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+}
+.not-front #region-content .block h2 a {
+    color: #013143;
+    text-decoration: none;
+}
+.not-front #region-content .block h2 a:hover{
+     text-decoration: underline;
+}
+
+
+.not-front #region-content .block h1 {
+    color: #013143;
+    font-family: arial,sans-serif;
+}
+
+.not-front #region-content .block h3 a {
+    color: #013143;
+    text-decoration: none;
+}
+.not-front #region-content .block h3 a:hover {
+    color:#2C89C6;
+}
+
+
+.not-front #region-content .block h4 {
+    color: #013143;
+    font-family: arial,sans-serif;
+    letter-spacing: 0.1px;
+}
+.search-info {
+   display:none;
+}
+
+.block p img {
+    padding: 0;
+}
+
+#page {
+	background: none repeat scroll #ffffff;
+}
+.block-s-cng-medium-profile {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.views-field-created {
+	color: #013143;
+}
+.views-field-type a {
+	text-decoration: none;
+	color: #013143;
+}
+.views-field-type a:hover {
+	text-decoration: underline;
+}
+.field-content a{
+	text-decoration: none;
+	color: #013143;
+}
+.field-content a:hover{
+	text-decoration: underline;
+}
+
+
+/* MAIN MENU */
+
+#block-menu-block-congress-main-menu-superfish {
+    background: none repeat scroll 0 0 transparent;
+}
+#block-menu-block-congress-main-menu-superfish .sf-menu a {
+    font-weight:bold;
+	color: #565B6A;
+	font-size: 1.3em;
+}
+#block-menu-block-congress-main-menu-superfish .sf-menu li.sfHover a  {
+    color: #ffffff;	
+	background: none no-repeat scroll 0 0 #255288;
+}
+#block-menu-block-congress-main-menu-superfish .sf-menu a.active { 
+    background: none repeat scroll 0 0 #255288;
+	color: #fff;
+}
+#block-menu-block-congress-main-menu-superfish .active-trail { 
+    background: none repeat scroll 0 0 #c5c5c5;
+}
+
+
+/* SIDE MENU */
+#block-menu-block-section-menu {
+	background: none repeat scroll 0 0 #2c89c6;
+    border: 0;
+	margin-right: 2%;
+	padding: 0;
+}
+#block-menu-block-section-menu  h2.block-title {
+    color: #FFFFFF;
+    font-family: verdana,sans-serif;
+    font-size: 1.8em;
+    letter-spacing: 0.1px;
+    margin-left: 6px;
+    padding: 10px;
+}
+.block-section-menu ul li.leaf:hover {
+    background: #ccc;
+}
+
+.block-section-menu ul li.leaf a{
+	display: block;
+    text-decoration: none;
+	color: #FFF;
+	font-size: 16px;
+	padding: 15px;
+}
+.block-section-menu ul li.leaf{
+	padding: 0;
+	margin: 0;
+}
+.block-section-menu ul li.leaf a:hover{
+	display: block;
+	text-decoration:none;
+	color: #2c89c6; 
+}
+
+/* ZONE WRAPPERS */
+
+#zone-footer-wrapper {
+	background: none repeat scroll 0 0 #013143;
+}
+#zone-header-wrapper {
+    background: url("../images/eastside-skyline-2.jpg") no-repeat scroll center center #000000;
+    height: 300px;
+    margin: 0;
+    background-size: cover;
+}
+
+.not-front #zone-header-wrapper {
+   display: none;
+}
+
+#block-boxes-rep-logo {
+	background: none repeat scroll 0 0 transparent;
+    position: relative;
+    top: -97px;
+    width: 100%;
+	z-index: 200;
+}
+
+
+.not-front #zone-content-wrapper {
+    margin: 0 auto;
+}
+#zone-content-wrapper {
+    margin: 15px auto;
+}
+
+/* ZONES */
+
+
+#zone-branding {
+	margin-top: 0;
+}
+#zone-header {
+    padding-top: 104px;
+}
+#zone-footer {
+	margin-top: 60px;
+	background: none repeat scroll 0 0 transparent;
+}
+#zone-content {
+
+}
+
+
+/* BLOCKS */
+#block-boxes-about-contact {
+    background: none repeat scroll 0 0 transparent;
+	position: relative;
+    right: -5%;
+    top: -134px;
+}
+
+#block-views-congress-news-block-latest-news {
+	background: none repeat scroll 0 0 #fff;
+	margin-top:0;
+}
+#block-views-congress-news-block-latest-news h3 a {
+	font-size: 1.2em;
+	line-height: 34px;
+	text-decoration: none;
+	font-family: nimbus-sans-condensed, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #333;
+	letter-spacing: normal;
+	text-transform: uppercase;
+	padding-bottom: 5px;
+	text-shadow: 0 1px white;
+	-webkit-font-smoothing: antialiased;
+}
+#block-views-congress-news-block-latest-news h3 a:hover {
+	color: #2C89C6;
+}
+
+.views-field-field-congress-article-type:before, .views-field-type:before, .pane-node-content-type:before, .field-name-field-congress-article-type:before {
+    color:#767676;
+}
+.views-field-field-congress-article-type a {
+	text-decoration: none;
+	color:#767676;
+}
+
+/* MORE LINK */
+
+.more-link {
+   background: none repeat scroll 0 0 transparent;
+}
+.more-link a{
+    background: none repeat scroll 0 0 #2881c5;
+    border-radius: 5px;
+    color: #013143;
+    font-weight: bold;
+    left: 5px;
+    padding: 9px;
+    position: relative;
+    text-decoration: none;
+    top: 7px;
+}
+.more-link a:hover{
+    background: none repeat scroll 0 0 #013143;
+	color: #fff;
+}
+
+#block-boxes-congress-newsletter-signup{
+	background: none repeat scroll 0 0 #ededed;
+	border-radius: 5px 5px 5px 5px ;
+	margin-bottom: 14px;
+}
+#block-boxes-congress-newsletter-signup h2{
+	font-family: nimbus-sans-condensed, Helvetica, Arial, sans-serif;
+	color: #333333;
+	letter-spacing: 0.1px;
+}
+#newsletter_signup_form label {
+	color: #333333;
+}
+#newsletter_signup_form .form-submit {
+	border-radius: 0;
+	text-shadow:none;
+	border: 0;
+	height: 28px;
+}
+#block-boxes-live-in-district {
+	background: none repeat scroll 0 0 #ededed;
+	border-radius: 5px 5px 5px 5px;
+	padding-left: 10px;
+}
+#block-boxes-live-in-district p{
+	color: #333333;
+	margin-bottom: 5px;
+}
+
+#block-boxes-live-in-district h2{
+	font-family: nimbus-sans-condensed, Helvetica, Arial, sans-serif;
+	color: #333333;
+	letter-spacing: 0.1px;
+}
+#block-boxes-live-in-district input[type="submit"] {
+	border-radius: 0;
+	margin-top: 10px;
+    float: right;
+    overflow: hidden;
+    white-space: normal;
+}
+#block-boxes-live-in-district .wsbform label {
+	color: #333333;
+	display: inline-block;
+}
+
+#block-boxes-live-in-district .required-field {
+	color: #F90B0B;
+}
+#signupExtendForm {
+    display: inline-block;
+    margin-left: 1%;
+    padding-bottom: 0;
+}
+
+
+#required-zip5 {
+	width: 23%;
+}
+#zip4 {
+	width: 24%;
+}
+#signup-email {
+	margin-right: 5px;
+    width: 67%;
+}
+
+.form-100 input[type="submit"] {
+	background: none repeat scroll 0 0 #2881c5;
+    border-radius: 0;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    text-shadow: none;
+}
+.form-100 input[type="submit"]:hover {
+	background: none repeat scroll 0 0 #013143;
+}
+#emailForm .form-25 {
+    width: 100%;
+}
+
+#emailForm input[type="submit"]{
+    border-radius:0;
+    background: none no-repeat scroll 0 0 #2785C5;
+    border-color:none;
+    border-radius:0;
+    border-style:none;
+    border-width:0;
+    color: #fff;
+    text-shadow:none;
+}
+
+#block-boxes-new-twitter {
+	background: none repeat scroll 0 0 #ededed
+	border-radius: 5px;
+}
+#twitter-widget-0 h1 {
+	color: #2c89c6;
+}
+
+#block-views-congress-offices-of-noslide  {
+	background: none repeat scroll 0 0 transparent;
+	padding-top: 46px;
+	width:100%;
+}
+
+#block-views-congress-offices-of-noslide h3 a {
+	font-family: nimbus-sans-condensed, Helvetica, Arial, sans-serif;
+	letter-spacing:0.1px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.panel-display .field-name-body {
+    font-size: 16px;
+}
+
+/*FORM ITEMS*/
+
+legend {
+    color: #013143;
+}
+
+label {
+    color: #013143;
+}
+.form-33 a {
+    text-decoration: none;
+	margin-left: 3px;
+	color: #7c7c7c;
+}
+.form-33 a:hover {
+   color: #002958;
+}
+
+.form-100 a {
+    text-decoration: none;
+	margin-left: 3px;
+	color: #7c7c7c;
+}
+
+.form-100 a:hover{
+    color: #002958;
+}
+
+.required-field {
+	color: #fff;
+}
+.not-front #region-content b {
+    color:#1C3B5B;
+}
+
+.form-100 input[type="text"], .form-50 input[type="text"], .form-33 input[type="text"], .form-25 input[type="text"], .form-11 input[type="text"] {
+    height: 49px;
+}
+
+.office-info {
+	color: #fff;
+}
+#zone-footer-bottom-wrapper {
+	background: none repeat scroll 0 0 #2881c5;
+}
+
+.block-menu-congress-footer-utility {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+
+#block-menu-menu-congress-footer-utility ul.menu {
+    text-align: center;
+}
+#block-menu-menu-congress-footer-utility ul.menu a{
+    text-decoration:none;
+	color: #fff;
+}
+#block-menu-menu-congress-footer-utility ul.menu a:hover{
+    text-decoration:underline;
+}
+#block-boxes-maloney-footer-address{
+
+background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+width:100%;
+
+}
+
+.faq ul {
+    padding: 0;
+}
+.faq li{
+	display: inline-block;
+    float: left;
+    height: 93px;
+    list-style: none outside none;
+    margin-bottom: 30px;
+    margin-right: 4%;
+    width: 88%;
+}
+.faq li p{
+	
+}
+
+.faq li a{
+
+}
+
+.faq li img {
+
+}
+
+
+.not-front #region-content img {
+    margin: 2px;
+    padding: 5px;
+}
+
+.pager li.pager-current {
+    background: none repeat scroll 0 0 #013143;
+}
+
+
+.pager li a:hover {
+    background: none repeat scroll 0 0 #2785C5;
+	color: #fff;
+}
+
+.not-front #region-content img {
+    background: none repeat scroll 0 0 #fff;
+	display: inline-block;
+	float:/*left*/none;
+}
+
+
+/*Health Bill Block*/
+
+#block-boxes-health-bill h3, #block-boxes-health-bill h2 {
+	font-size: 22px;
+	color: #2c89c6;
+	font-family: nimbus-sans-condensed,Helvetica,Arial,sans-serif;
+	font-weight: normal;
+    letter-spacing: 0.1px;
+}
+#block-boxes-health-bill #dayscounter{
+}
+
+#block-boxes-health-bill h2 {
+    font-weight: bold;
+}
+#block-boxes-health-bill {
+	font-size: 22px;
+	background: #f5f5f5 none repeat scroll 0 0;
+    border: 2px solid #013143;
+    border-radius: 5px;
+	color: #2c89c6;
+}
+
+.email-btn {
+    border: 3px solid #e70c0c;
+    border-radius: 11px;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    padding: 5px;
+	color: #e70c0c !important;
+}
+.email-btn a:link, .email-btn a:visited {
+	font-family: nimbus-sans-condensed,Helvetica,Arial,sans-serif;
+	color: #e70c0c;
+	font-weight: 600 !important;
+	text-decoration: none !important;
+	font-size: 1.2em !important;
+	width: 100% !important;
+}
+
+
+.goog-te-gadget-simple {
+ 
+    margin-top: 8px;
+}
+
+/*GOOGLE TRANSLATE*/
+.block-google-translate {
+	background: transparent none repeat scroll 0 0;
+}
+
+
+
+
+/********* CHANGES 9/14/18 **************/
+
+/*
+
+ #region-user-second {
+    position: absolute;
+    top: 5px;
+    right: 3%;
+} 
+
+ #region-postscript-third {
+    position: absolute;
+    top: 37px;
+    right: 1.5%;
+} 
+
+#block-boxes-email-button {
+    margin-left: 2%;
+    width: 200% !important;
+}
+
+
+ #boxes-box-cng_social_media_fa_medium .fa-3x {
+    font-size: 2em;
+} 
+
+#region-user-first {
+    width: 120px;
+}
+
+#region-user-first {
+    padding-top: 10px;
+}
+
+#zone-branding {
+    margin-left: 2% !important;
+}
+
+#region-user-first {
+    width: 100px !important;
+}
+
+@media all and (max-width: 980px) {
+  #region-branding {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#region-user-second {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#region-postscript-third {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#block-boxes-email-button {
+    width: 100% !important;
+}
+
+#zone-branding-wrapper {
+    height: auto !important;
+    min-height: 170px !important;
+}
+
+#zone-branding {
+    margin-left: 0 !important;
+    text-align: center !important;
+}
+
+#region-branding {
+    margin-right: 0 !important;
+    width: 100%;
+}
+
+#region-menu {
+    margin-right: 0 !important;
+    width: 100% !important;
+}
+
+#region-user-first {
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+    margin-bottom: 5px;
+    padding-top: 0 !important;
+}
+
+#block-boxes-google-translate {
+    margin-bottom: 0;
+}
+
+#zone-header {
+    padding-top: 134px;
+}
+
+#region-branding {
+    width: 100% !important;
+}
+
+#region-branding {
+    margin-left: 0 !important;
+}
+
+#logo {
+   padding-left: 5px !important;
+   padding-right: 5px !important;
+}
+
+#block-boxes-congress-mobile-hamburger-menu {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #2987bf;
+}
+
+#block-boxes-email-button {
+    background: transparent;
+}
+
+#block-boxes-email-button {
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+}
+
+#region-user-first {
+    margin-left: 0 !important;
+}
+
+#block-boxes-about-contact {
+    display: none;
+}
+
+
+}
+
+@media all and (min-width: 1300px) and (max-width: 1400px) {
+ 
+ #region-user-second {
+    position: absolute;
+    top: 5px;
+    right: 12%;
+} 
+
+ #region-postscript-third {
+    position: absolute;
+    top: 37px;
+    right: 9.75%;
+} 
+
+}
+
+@media all and (min-width: 1401px) and (max-width: 1599px) {
+
+ #zone-branding {
+    margin-left: 7em !important;
+}
+
+ #region-user-second {
+    right: 9% !important;
+} 
+
+#region-postscript-third {
+    position: absolute;
+    top: 37px;
+    right: 7% !important;
+} 
+
+}
+
+@media all and (min-width: 1600px) {
+
+
+#region-user-second {
+    right: 19% !important;
+}
+
+#region-postscript-third {
+    right: 18% !important;
+}
+}
+
+*/
+
+@media all and (max-width: 980px) {
+
+  #region-branding {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#region-user-second {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#region-postscript-third {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#block-boxes-email-button {
+    width: 100% !important;
+}
+
+#zone-branding-wrapper {
+    height: auto !important;
+    min-height: 170px !important;
+}
+
+#zone-branding {
+    margin-left: 0 !important;
+    text-align: center !important;
+}
+
+#region-branding {
+    margin-right: 0 !important;
+    width: 100%;
+}
+
+#region-menu {
+    margin-right: 0 !important;
+    width: 100% !important;
+}
+
+#region-user-first {
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+    margin-bottom: 5px;
+    padding-top: 0 !important;
+}
+
+#block-boxes-google-translate {
+    margin-bottom: 0;
+}
+
+#zone-header {
+    padding-top: 134px;
+}
+
+#region-branding {
+    width: 100% !important;
+}
+
+#region-branding {
+    margin-left: 0 !important;
+}
+
+#logo {
+   padding-left: 5px !important;
+   padding-right: 5px !important;
+}
+
+#block-boxes-congress-mobile-hamburger-menu {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #2987bf;
+}
+
+#block-boxes-email-button {
+    background: transparent;
+}
+
+#block-boxes-email-button {
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+}
+
+#region-user-first {
+    margin-left: 0 !important;
+}
+
+#block-boxes-about-contact {
+    display: none;
+}
+
+
+}
+

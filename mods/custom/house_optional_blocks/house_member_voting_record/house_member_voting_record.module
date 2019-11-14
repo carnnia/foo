@@ -1,0 +1,107 @@
+<?php
+//Max.Rakhimov
+
+/**
+ * Implementation of hook_menu
+ */
+function house_member_voting_record_menu() {
+  $items = array();
+  $items['admin/config/house'] = array(
+    'title' => 'House Custom Settings',
+    'description' => 'Member site customization tools.',
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('access administration pages'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+  $items['admin/config/house/house_member_voting_record'] = array(
+    'title' => 'House Member Voting Record',
+    'description' => 'Configure Voting Record block.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('house_member_voting_record_admin_settings'),
+    'access arguments' => array('administer site configuration'),
+    'weight' => 8,
+    'file' => 'house_member_voting_record.admin.inc',
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function house_member_voting_record_block_info() {
+  $blocks['house_member_voting_record'] = array(
+    'info' => t('Member Voting Record'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ * This hook generates the contents of the blocks themselves.
+ */
+function house_member_voting_record_block_view($delta = '') {
+  //The $delta parameter tells us which block is being requested.
+  $block = array();
+  switch ($delta) {
+    case 'house_member_voting_record':
+      $block['subject'] = '';
+      $block['content'] = house_member_voting_record_contents($delta);
+      break;
+    }
+  return $block;
+}
+
+/**
+ * Function to generat the block content
+ */
+function house_member_voting_record_contents ($delta) {
+  $output = '';
+  $output .= '<div class="section-content">';
+  $output .= '<h3>' . check_plain(variable_get('house_member_voting_record_block_title')) . '</h3>';
+  if ($delta == 'house_member_voting_record') {
+    drupal_add_css(drupal_get_path('module', 'house_member_voting_record') . '/house_member_voting_record.css');
+
+    $url = 'http://wwwd.house.gov/htbin/http_votes.pl?' .
+      '&member_state=' . variable_get('house_member_voting_record_state') .
+      '&member_id=' . variable_get('house_member_voting_record_member_id') .
+      '&max=' . check_plain(variable_get('house_member_voting_record_block_number_items', 5)) . '&rt_site=www.house.gov&rt_name=/apps/votes/templates/generic_votes.js';
+
+    $response = drupal_http_request($url, array('timeout' => 5));
+    $data = $response->data;
+
+    if ($response->code != 200) {
+      return array('#markup' => t('Cannot retrieve data.'));
+    }
+
+    $data = substr($data, 0, strlen($data) - 6) . ']';
+    $data = json_decode($data);
+
+    if (!$data) {
+      return array('#markup' => t('Cannot convert retrieved data.'));
+    }
+
+    $header = array(
+      array('data' => t('Date'), 'class' => 'vote-date'),
+      array('data' => t('Roll Call'), 'class' => 'vote-roll-call'),
+      array('data' => t('Bill'), 'class' => 'vote-bill'),
+      array('data' => t('My Vote'), 'class' => 'vote-my-vote')
+    );
+
+    $rows = array();
+    foreach ($data as $vote) {
+      $rollcall = l($vote->rc, 'http://clerk.house.gov/cgi-bin/vote.asp?year=' . $vote->year . '&rollnumber=' . $vote->rc, array('attributes' => array('title' => $vote->question)));
+      $bill = l($vote->billdots, 'http://thomas.loc.gov/cgi-bin/bdquery/z?d' . $vote->congress . ':' . $vote->billdots . ':', array('attributes' => array('title' => $vote->title)));
+      $rows[] = array(
+        array('data' => $vote->mmdd, 'class' => 'vote-date'),
+        array('data' => $rollcall, 'class' => 'vote-roll-call'),
+        array('data' => $bill, 'class' => 'vote-bill'),
+        array('data' => $vote->voted, 'class' => 'vote-my-vote')
+      );
+    }
+
+    $output .= theme('table', array('header'=> $header,'rows' => $rows));
+  }
+  $output .= '</div>';
+  return array('#markup' => $output);
+}

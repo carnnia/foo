@@ -1,0 +1,103 @@
+<?php
+//Max.Rakhimov
+
+
+/**
+ * Implementation of hook_menu
+ */
+function house_enews_popup_menu() {
+  $items = array();
+  $items['admin/config/house'] = array(
+    'title' => 'House Custom Settings',
+    'description' => 'Member site customization tools.',
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('access administration pages'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+  $items['admin/config/house/house_enews_popup'] = array(
+    'title' => 'House Enews Popup',
+    'description' => 'Configure Enews Popup block.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('house_enews_popup_admin_settings'),
+    'access arguments' => array('administer site configuration'),
+    'weight' => 8,
+    'file' => 'house_enews_popup.admin.inc',
+  );
+  return $items;
+}
+
+
+/**
+ * Implements hook_block_info().
+ */
+function house_enews_popup_block_info() {  
+  $blocks['house_enews_popup'] = array(
+    'info' => t('Enews Popup'), // what is the name of the block? Enews Popup
+  );
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view().
+ * This hook generates the contents of the blocks themselves.
+ */
+function house_enews_popup_block_view($delta = '') {
+  //The $delta parameter tells us which block is being requested.
+	$block = array();
+  switch ($delta) {
+    case 'house_enews_popup':
+      $block['subject'] = variable_get('house_enews_popup_custom_enabled') ? check_plain(variable_get('house_enews_popup_custom_title')) : check_plain(variable_get('house_enews_popup_title'));
+      $block['content'] = house_enews_popup_contents($delta);
+      break;
+
+			}
+  return $block;
+}
+
+
+/**
+ * Function to generat the block content
+ */
+function house_enews_popup_contents ($delta) {
+  $output = '';
+  if ($delta == 'house_enews_popup') {
+    $output .= '<div id="close-enews-popup">X</div>';
+    $output .= '<div id="popupbox" class="popup_block">';
+    drupal_add_js('misc/jquery.cookie.js');    
+    drupal_add_css(drupal_get_path('module', 'house_enews_popup') . '/house_enews_popup.css');
+    drupal_add_js(drupal_get_path('module', 'house_enews_popup') . '/house_enews_popup.js');    
+
+    if (variable_get('house_enews_popup_custom_enabled')) {
+      $output .= variable_get('house_enews_popup_custom');
+    }
+    else {
+      $url = '/htbin/formproc/newsletter-subscribe.txt&amp;display=/&amp;nobase&amp;fpGetVer=2';
+      $text = t('Enter email address');
+      $output .= '<label for="required-valid-email">';
+      $output .= check_plain(variable_get('house_enews_popup_message'));
+      $output .= '</label>';
+
+      $output .= '
+          <form action="' . $url . '" method="post" name="house_enews_popup" id="house_enews_popup">
+            <input
+              type="text"
+              title="' . $text . '"
+              name="required-valid-email"
+              id="required-valid-email"
+              size="22"
+              maxlength="50"
+              value="' . $text . '"
+              onfocus="if(this.value==\''. $text . '\') this.value=\'\';" onblur="if(this.value==\'\') this.value=\'' . $text . '\';"/>
+            <input value="' . t('Sign up') . '" type="submit" class="form-submit" id="form-enews-submit"/>
+            <input value="' . t('No thanks') . '" type="submit" class="form-submit" id="form-enews-cancel"/>
+          </form>
+        ';
+    }
+    $output .= '</div>';
+
+
+    return array('#markup' => $output);
+  }
+}

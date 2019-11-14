@@ -1,0 +1,306 @@
+/* Casey Start */
+.boxee25L{width:25%; float:left; vertical-align:top; margin:auto;}
+.boxee25R{width:25%; float:right; vertical-align:top; margin:auto;}
+.boxee33R{width:33%; float:left; vertical-align:top; margin:auto;}
+.boxee33L{width:33%; float:right; vertical-align:top; margin:auto;}
+.boxee50L{width:50%; float:left; vertical-align:top; margin:auto;}
+.boxee50R{width:50%; float:right; vertical-align:top; margin:auto;}
+.boxee66L{width:66%; float:left; vertical-align:top; margin:auto;}
+.boxee66R{width:66%; float:right; vertical-align:top; margin:auto;} 
+.stand-out{letter-spacing:1px; font-weight:bold; font-style:italic; font-size:11px;}
+
+.node-editors-choice .block-content {padding:0;}   
+#cboxContent{z-index: 9999; background-color: #BCC6CC; position: relative;}
+#cboxLoadedContent {z-index: 9999; background-color: #BCC6CC;}
+#cboxTitle{z-index: 9999; background-color: #BCC6CC; padding: 10px;}
+#cboxClose{z-index: 9999; background-color: #BCC6CC; padding: 10px; cursor:pointer;}
+/* Casey End */
+#navigation ul{margin-left:20px;}
+
+#navigation li a{padding:7px 18px 8px 21px;
+font-size:12px;
+}
+
+#block-search-form{width:193px;
+    background: url("../images/maloney-search.png") no-repeat scroll 0 0 transparent;
+    border:1px solid #073a6a;
+    padding:7px 2px 7px 12px;
+    height:26px;
+    margin:32px 0px 0px 44px;
+    }
+
+#header-right-content{padding-right:0px;}
+#header-search .form-text {width:142px;}
+#header-search .section-content{background:none transparent !important;
+  margin:0px;
+  padding:0px;
+  border:0px;
+  }
+#header-search
+{background:none transparent !important;
+  margin:0px;
+  padding:0px;
+  border:0px;
+}
+#node-6428{border:0px none !important;
+ margin: 21px 25px 25px -20px;
+}
+#header-right-content {width:262px;
+  height:120px;
+  }
+p.header-icons{float:right;
+}
+.header-icons{margin-top:-8px;
+}
+#header-links{margin-left:100px;
+  width:285px;}
+p.header-link a{color:#ffffff;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:bolder;
+  font-style:italic;
+  text-shadow: 0 1px 1px #000000;
+  }
+p.header-link  {margin-top:-2px;
+padding-left:8px;
+  }
+.section-content h3 {
+  border-top:6px solid #AB0303;
+  background: none;
+  color: #AB0303;
+  font-size: 15px;
+  padding: 8px 10px;
+  font-family:Arial, Helvetica, sans-serif;
+  text-transform:uppercase;
+  font-weight:bolder;
+}
+/*
+district block
+}*/
+
+.formboxL {
+    float: left;
+    font-size: 84%;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+#latest-news h4, #latest-news-right h4, #latest-news h4 a, #latest-news-right h4 a {
+   font-family:Georgia, serif !important;
+  font-size:18px;
+  color:#0F406F;
+  letter-spacing:normal;
+  font-weight:normal;
+  line-height:21px;
+}
+#thomas-bill-search h3 {font-size: 16px;
+    color: #AB0303;
+	background: none center top transparent;
+	margin: 0px;
+	
+    }
+
+#latest-news .read-more a {margin-left:390px;
+padding-bottom:0px;
+margin-bottom:0px;
+}
+.col-2 .section-content {
+    width: 100%;
+}
+
+ 
+.col-2 .section-content{width:600px;
+}
+
+
+.quicktabs_main.quicktabs-style-sky{
+   background: url("../images/background-section.gif") repeat-x scroll center top #DDDDDD;
+    border: 2px solid #FFFFFF;
+    margin: 0;
+    padding: 0;
+    }
+
+ul.quicktabs-tabs{ margin-left:4px;
+}
+ul.quicktabs-tabs.quicktabs-style-sky li.active a, ul.quicktabs-tabs.quicktabs-style-sky li.active a:visited
+ {
+    padding-bottom:0px;
+    margin-top:2px;
+    margin-left:4px;
+    border:0px;
+    background-color:#AB0303;
+    background-image:none;
+}
+
+#block-quicktabs-homepagetabs{padding-bottom:0px;
+  margin-bottom:0px;
+}
+.section-content .entry h4, .node-editors-choice h4 {font-family:Georgia, serif !important;
+  font-size:18px;
+  color:#0F406F;
+  letter-spacing:normal;
+  font-weight:normal;
+  line-height:21px;
+}
+
+#latest-news{width:610px;
+  margin: 5px 0px 1px 1px;
+}
+#latest-news h3{margin-top:-4px;
+  margin-left:-1px;
+}
+.view-press-releases {margin-bottom:0px;
+}
+/*
+#header-social-media{float:right;
+  margin-top:25px;
+  }
+*/
+.header-right-content{background:#0000ff;}
+.region-header{background:transparent;}
+#block-nodeblock-6428{background:#ff0000;
+}
+#block-nodeblock-6428
+
+#header-links- .section-content{background:transparent !important;
+  margin:0px;
+  padding:0px;
+  width:100px;
+  float:right;
+}
+#header-links- p{float:right;
+  margin-top: 25px;
+  background:red;
+  }
+#header-subscribe{float:left;
+  margin-top: -17px !important;
+  font-weight: bold;
+  font-size:14px;
+  text-shadow: 0 1px 1px #000000;
+  }
+#block-nodeblock-6428{background:none transparent;
+}
+#doyou {background-position:center top;
+  background:transparent none;
+  padding:9px 5px 5px 5px; 
+  width: 278px;
+  margin-top:0px;
+  }
+#node-4313 .block-content{padding-left:0px;
+  padding-top:5px;
+  }
+#node-4313 .section-content{background: url(  "../images/mapNYbg.png") scroll center top #DDDDDD;
+  width:294px !important;
+}
+#doyou fieldset{border:none;
+margin-bottom:0px;
+}
+.wsbform{padding-left:15px;
+margin-bottom:0px;
+}
+#doyou p{padding:0px 10px;}
+
+.wsbform legend{padding:5px 0px 5px 0px;
+  font-family:Georgia, serif;
+  color:#104170;
+  border-bottom: double 1px #e6e1e1;
+   border-top: double 1px #e6e1e1;
+  font-size:14px;
+  }
+.formboxL label{text-transform:uppercase;}
+
+#zip4{width:65px;
+}
+.formboxL{margin-left:6px;
+          }
+#required-zip5{width:70px;
+}
+
+#doyou-submit{background: url(  "../images/districtBut.png") no-repeat  scroll center top transparent;
+  width:134px;
+  height:29px;
+  border:0px;
+  color:#ffffff;
+  padding-bottom:7px;
+}
+
+
+#block-nodeblock-71, #block-views-editors-choice-block-1, #block-nodeblock-4315, .block-house-thomas-bill-search{margin-top:20px;
+}
+
+#today-in-congress, #bills-introduced-in-congress, #sign-up, #do-you-live-in-ny-district{width:293px;
+}
+#photo-gallery{min-height:170px;
+}
+#today-in-congress ul{padding:0px 20px 0px 20px;
+}
+/*video area styles*/
+#diff-inline-215{
+  margin-bottom:20px;
+}
+.col-2 .section-content{width: 100%;
+}
+#sub-footer{margin: auto; 
+  width: 940px; 
+  padding-left: 10px; 
+  padding-right: 10px;
+}
+
+#sub-contact-welcome{margin-left:9px;
+}
+#sub-photos{margin-right:1px;
+}
+ 
+#jump-box{width:100%; margin:auto; text-align: left;}
+
+.related-list h2{display: none;}
+.featured-list-item{border-bottom: 0px solid #CCCCCC; padding-bottom:0px;}
+.view-press-releases{border: 0px solid #CCCCCC;}
+.divide{border-top: 0px solid #CCCCCC!important; }
+body.left-nav #inner-content{width:100%;}
+#jump-box{margin: 10px; padding:10px;}
+.the-top{border: 2px solid #CCCCCC!important; margin: 10px; padding:10px; float:right;}
+.read-more a{margin: 10px;}
+.issue-show {width: 100%;
+      margin: 1em .5em;
+}
+.issue-show h3 {margin: 0;
+padding: .25em;
+/*background: #d0eff9;*/
+/*border-top: 1px solid #386785;*/
+/*border-bottom: 1px solid #386785;*/
+background: url(  "../images/plus.png") no-repeat  scroll left top transparent;
+cursor: pointer;
+padding-left: 25px;
+}
+.issue-show div { padding: .5em .25em;
+}
+a:link{text-decoration:underline;}
+#block-house-member-voting-record-house-member-voting-record .section-content{width:100%; margin-bottom:20px;}
+#footer-category-links{display:none;}
+#block-nodeblock-71{margin-top:0px;} 
+#header-search .form-text {text-align: left;}
+
+.press-contact{margin-bottom:20px;}
+
+/* this is to compensate for data in the body of pages that are wrapped in <div tags insted of <p tags*/
+.field-item  div{font-family: Arial,sans-serif;
+    font-size: 1.167em;
+    line-height: 1.5em;
+    margin: 0 0 20px;
+		border: 10px solid #CCCCCC;
+}
+/* this to keep the previous rules from adversly afecting the forms */
+.formboxL{margin: 0!important; line-height: 1.0em!important; border: none!important; }
+.wsbform .phone-type{border: none!important; }
+.formboxL label {font-size: 11px!important;}
+#map_canvas{ border: none!important; }
+#map_canvas div{ border: none!important; }
+.twtr-hd h3 {border-top: 0 none!important;}
+.hide-me{display:none; height:0; width:0;}
+.print-this {background: url("../images/print.jpg") no-repeat left top; height:25px; width:25px;}
+#node-7032{height:25px; width:25px; border:0; float:right;}
+
+.press-contact{margin-bottom:20px;} 
+.kiss {font-size: 8px; font-weight: bold; font-family:Georgia, 'Times New Roman', Times, serif;}
+#section_body h2, .detail-page #inner-content h2{margin: 0px 0 5px 0; padding-top: 10px;}

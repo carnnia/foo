@@ -1,0 +1,24 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ */
+
+/**
+ * hook_install
+ */
+function house_member_voting_record_install() {
+  variable_set('house_member_voting_record_block_title', t('Recent Votes'));
+  variable_set('house_member_voting_record_block_number_items', 5);
+}
+
+/**
+ * hook_uninstall
+ */
+function house_member_voting_record_uninstall() {
+  variable_del('house_member_voting_record_state');
+  variable_del('house_member_voting_record_last_name');
+  variable_del('house_member_voting_record_block_title');
+  variable_del('house_member_voting_record_block_number_items');
+}

@@ -1,0 +1,5 @@
+name = Maloney Admin Settings
+description = Tweaks to the content editing interface
+core = 7.x
+version = 7.x-1.0
+project = maloney_admin_settings

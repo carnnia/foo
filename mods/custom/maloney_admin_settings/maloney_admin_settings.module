@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Enables Promote to Homepage checkbox
+*/
+function maloney_admin_settings_form_node_form_alter(&$form, $form_state) {
+  $form['options']['promote']['#access'] = TRUE;
+}

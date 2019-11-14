@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_enable().
+ */
+function maloney_admin_settings_install() {
+  //update the weight of this module so our hooks occur after congress_admin_settings
+  db_update('system')
+    ->fields(array('weight' => 99))
+    ->condition('name', 'maloney_admin_settings', '=')
+    ->execute();
+}

@@ -1,0 +1,27 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the House Gmap module.
+ */
+
+/**
+ * hook_install
+ */
+function house_enews_popup_install() {
+  variable_set('house_enews_popup_title', t('Newsletter Signup'));
+  variable_set('house_enews_popup_message', t('Get updates on important issues sent directly to your email address.'));
+}
+
+/**
+ * hook_uninstall
+ */
+function house_enews_popup_uninstall() {
+  variable_del('house_enews_popup_title');
+  variable_del('house_enews_popup_message');
+  
+  variable_del('house_enews_popup_custom_enabled');
+  variable_del('house_enews_popup_custom_title');
+  variable_del('house_enews_popup_custom');
+}

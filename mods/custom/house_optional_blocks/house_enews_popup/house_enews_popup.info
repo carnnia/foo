@@ -1,0 +1,14 @@
+name = House Enews Popup
+description = An optional newsletter subscription popup for the homepage.  It provides a newsleteer subscription popup window. A persistent cookie will disable the popup on the subsequent renderings of homepage.
+package = House Optional Blocks
+core = 7.x
+files[] = house_enews_popup.module
+configure = admin/config/house/house_enews_popup
+version = "7.x-2.0"
+
+
+; Information added by drush on 2012-07-03
+version = "RELEASE-V20120619-3"
+project = "house"
+datestamp = "1341347286"
+

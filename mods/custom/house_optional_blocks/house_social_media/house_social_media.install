@@ -1,0 +1,34 @@
+<?php
+//Max.Rakhimov
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the House Social Media.
+ */
+
+/**
+ * hook_install
+ */
+function house_social_media_install() {
+}
+
+/**
+ * hook_uninstall
+ */
+function house_social_media_uninstall() {
+  variable_del('house_social_media_facebook_block_title');
+  variable_del('house_social_media_facebook_url');
+  variable_del('house_social_media_facebook_width');
+  variable_del('house_social_media_facebook_height');
+  variable_del('house_social_media_facebook_advanced_enabled');
+  variable_del('house_social_media_facebook_advanced');
+  
+  variable_del('house_social_media_twitter_block_title');
+  variable_del('house_social_media_twitter_username');
+  variable_del('house_social_media_twitter_height');
+  variable_del('house_social_media_twitter_background');
+  variable_del('house_social_media_twitter_text_color');
+  variable_del('house_social_media_twitter_link_color');
+  variable_del('house_social_media_twitter_advanced_enabled');
+  variable_del('house_social_media_twitter_advanced');
+}

@@ -1,0 +1,39 @@
+<?php
+//M.Rakhimov
+
+/**
+ * Implements hook_block_info().
+ */
+function house_optional_blocks_block_info() {
+  $blocks['house_addthis'] = array(
+    'info' => t('Addthis'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function house_optional_blocks_block_view($delta = '') {
+	$block = array();
+  switch ($delta) {
+    case 'house_addthis':
+      $block['subject'] = '';
+      $addthis_base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 'https://s7.addthis.com/' : 'http://s7.addthis.com/';
+      $block['content'] = theme('block-house-addthis', array('addthis_base_url' => $addthis_base_url, 'is_404' => house_core_is_404()));
+      break;
+  }
+  return $block;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function house_optional_blocks_theme() {
+  return array(
+   'block-house-addthis' => array(
+      'variables' => array('addthis_base_url' => NULL, 'is_404' => house_core_is_404()),
+      'template' => 'house_addthis/block-house-addthis',
+    ),
+  );
+}

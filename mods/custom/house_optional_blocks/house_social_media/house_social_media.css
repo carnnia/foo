@@ -1,0 +1,9 @@
+.facebook-frame-wrapper {
+  background: transparent;
+  margin-top: 10px;
+  text-align: center;
+}
+.facebook-frame-wrapper iframe {
+  border:none;
+  overflow:hidden;
+}

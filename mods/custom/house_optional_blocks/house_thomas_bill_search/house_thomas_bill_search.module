@@ -1,0 +1,40 @@
+<?php
+//C.Carnnia & M.Rakhimov
+
+/**
+ * Implements hook_block_info().
+ */
+function house_thomas_bill_search_block_info() {
+  $blocks['house_thomas_bill_search'] = array(
+    'info' => t('Thomas Bill Search'),
+  );
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view().
+ */
+function house_thomas_bill_search_block_view($delta = '') {
+	$block = array();
+  switch ($delta) {
+    case 'house_thomas_bill_search':
+      $block['subject'] = '';
+      $block['content'] = theme('block-house-thomas-bill-search');
+      break;
+  }
+  return $block;
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function house_thomas_bill_search_theme() {
+  return array(
+   'block-house-thomas-bill-search' => array(
+      'variables' => array('items' => NULL),
+      'template' => 'block-house-thomas-bill-search',
+    ),
+  );
+}

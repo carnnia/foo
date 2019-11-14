@@ -1,0 +1,144 @@
+<?php
+//Max.Rakhimov
+
+
+/**
+ * Implementation of hook_menu
+ */
+function house_social_media_menu() {
+  $items = array();
+  $items['admin/config/house'] = array(
+    'title' => 'House Custom Settings',
+    'description' => 'Member site customization tools.',
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('access administration pages'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+  $items['admin/config/house/house_social_media'] = array(
+    'title' => 'House Social Media',
+    'description' => 'Configure Facebook and Twitter blocks.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('house_social_media_admin_settings'),
+    'access arguments' => array('administer site configuration'),
+    'weight' => 8,
+    'file' => 'house_social_media.admin.inc',
+  );
+  return $items;
+}
+
+
+/**
+ * Implements hook_block_info().
+ */
+function house_social_media_block_info() {  
+  $blocks['facebook'] = array(
+    'info' => t('Facebook'), 
+  );
+  $blocks['twitter'] = array(
+    'info' => t('Twitter'), 
+  );
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view().
+ * This hook generates the contents of the blocks themselves.
+ */
+function house_social_media_block_view($delta = '') {
+  //The $delta parameter tells us which block is being requested.
+	$block = array();
+  if ($delta == 'facebook') {
+    $block['content'] = array('#markup' => house_social_media_block_content_facebook());
+  }
+  elseif ($delta == 'twitter') {
+    $block['content'] = array('#markup' => house_social_media_block_content_twitter());
+  }
+  return $block;
+}
+
+/**
+ * This hook generates the contents of the facebook block.
+ */
+function house_social_media_block_content_facebook() {
+  drupal_add_css(drupal_get_path('module', 'house_social_media') . '/house_social_media.css');
+  $output = '';
+  $output .= '<div class="section-content">';
+  $output .= '<h3>' . check_plain(variable_get('house_social_media_facebook_block_title', t('Join me on Facebook'))) . '</h3>';
+  $output .= '<div class="facebook-frame-wrapper">';
+
+  if (variable_get('house_social_media_facebook_advanced_enabled')) {
+    $output .= variable_get('house_social_media_facebook_advanced');
+  }
+  else {
+    $output .= '
+      <iframe
+        src="http://www.facebook.com/plugins/likebox.php?href=' .  htmlspecialchars(variable_get('house_social_media_facebook_url')) . '&amp;show_faces=false&amp;stream=true&amp;header=false&amp;width=' . check_plain(variable_get('house_social_media_facebook_width', '284')) . '&amp;frameborder=0&amp;height=395"
+        scrolling="no"
+        frameborder="0"
+        style="width:' . check_plain(variable_get('house_social_media_facebook_width', '284')) . 'px; height:395px;"
+        allowTransparency="true">
+      </iframe>
+      ';
+  }
+  $output .= '</div>';
+  $output .= '</div>';
+  return $output;
+}
+
+/**
+ * This hook generates the contents of the twitter block.
+ */
+function house_social_media_block_content_twitter() {
+  $output = '';
+  $output .= '<div class="section-content">';
+  $output .= '<h3>' . check_plain(variable_get('house_social_media_twitter_block_title', t('Follow me on Twitter'))) . '</h3>';
+
+  if (variable_get('house_social_media_twitter_advanced_enabled')) {
+    $output .= variable_get('house_social_media_twitter_advanced');
+  }
+  else {
+    $output .= '<div class="twtr-widget" id="house_social_media_twitter"></div>';
+    $output .= '
+    <script>
+      jQuery(window).load(function(){
+        jQuery.getScript(\'http://widgets.twimg.com/j/2/widget.js\', function(){
+            new TWTR.Widget({
+            id: "house_social_media_twitter",
+            version: 2,
+            type: \'profile\',
+            rpp: 4,
+            interval: 6000,
+            width: \'auto\',
+            height: ' . check_plain(variable_get('house_social_media_twitter_height', '300')) . ',
+            theme: {
+              shell: {
+                background: \'' . check_plain(variable_get('house_social_media_twitter_background', 'transparent')) . '\',
+                color: \'' . check_plain(variable_get('house_social_media_twitter_text_color', '#666666')) . '\'
+              },
+              tweets: {
+                background: \'' . check_plain(variable_get('house_social_media_twitter_background', 'transparent')) . '\',
+                color: \'' . check_plain(variable_get('house_social_media_twitter_text_color', '#666666')) . '\',
+                links: \'' . check_plain(variable_get('house_social_media_twitter_link_color', '#1D3D8E')) . '\'
+              }
+            },
+            features: {
+              scrollbar: false,
+              loop: false,
+              live: false,
+              hashtags: true,
+              timestamp: true,
+              avatars: false,
+              behavior: \'all\'
+            }
+          }).render().setUser(\''. check_plain(variable_get('house_social_media_twitter_username')) . '\').start();
+          })
+      })
+      </script>
+    ';
+  }
+
+  $output .= '</div>';
+  return $output;
+}

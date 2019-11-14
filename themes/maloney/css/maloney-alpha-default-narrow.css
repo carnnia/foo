@@ -1,0 +1,86 @@
+/************************************************************
+MALONEY CYCLE 11
+************************************************************/
+
+#region-user-first {
+	width: 154px;
+	
+}
+
+.not-front #section-content{
+  padding-top: 110px;
+}
+#zone-branding-wrapper {
+    height: 95px;
+}
+#block-boxes-rep-logo {
+    width: 724px;
+}
+#block-boxes-about-contact {
+    right: 112px;
+}
+#region-branding {
+    margin-right: 100%;
+    width: 31%;
+}
+#region-menu {
+    margin-right: 0;
+	width: 535px;
+}
+
+#region-sidebar-first {
+}
+
+
+#block-menu-block-congress-main-menu-superfish .sf-menu a {
+    padding: 1em 0.5em;
+}
+#block-menu-block-congress-main-menu-superfish .sf-menu a {
+	font-size: 0.9em;
+}
+#block-menu-block-congress-main-menu-superfish .sf-menu li.sfHover > ul, .sf-menu li:hover > ul {
+    left: -0.02em;
+    top: 2.2em;
+}
+.sf-menu ul {
+    
+    width: 200px!important;
+}
+
+#region-user-first {
+    position: relative;
+    top: -26px;
+    width: 97px;
+}
+#block-boxes-email-button {
+	width: 100%;
+}
+#search-block-form .form-item input {
+    width: 69%;
+}
+#required-zip5 {
+	width: 41%;
+}
+#zip4 {
+	width: 41%;
+}
+#emailForm .form-25 {
+    width: 47%;
+}
+#block-boxes-live-in-district input[type="submit"] {
+    float: left;
+    overflow: hidden;
+    white-space: normal;
+}
+#block-boxes-live-in-district .wsbform label {
+	display: none;
+}
+
+#signup-email {
+    width: 44%;
+}
+
+.faq li {
+    font-size: 14px;
+    width: 46%;
+}

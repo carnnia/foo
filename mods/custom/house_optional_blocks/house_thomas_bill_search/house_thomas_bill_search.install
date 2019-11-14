@@ -1,0 +1,65 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the House Thomas Bill Search module.
+ */
+
+/**
+ * Implements hook_install()
+ */
+function house_thomas_bill_search_install() {
+  house_thomas_bill_search_update_7100();
+}
+
+/**
+ * Replaces nodeblock implementation with this module's block.
+ */
+function house_thomas_bill_search_update_7100() {
+  $node = node_load(172); // we seeded the editor's choice node under this id
+  if (isset($node->body[$node->language][0]['value'])) {
+    // md5s of seeded node's bodies
+    $md5s = array(
+      '8c94ea68b73f8fd3e67371cd109ffa14', // with comment
+      'e5038bad807ea6132d4b4ccc5eadc525', // without comment
+      '97d6cfb366443f4ac46f40eeb364109f', // freshman sprint
+    );
+    if ($node->title == t('Thomas Bill Search') && in_array(md5($node->body[$node->language][0]['value']), $md5s)) {
+      // replaces the block in all contexts and deletes both the node and the old block
+      $list = context_context_list();
+      $delete_node = FALSE;
+      foreach ($list as $name) {
+        $context = context_load($name);
+        foreach ($context->reactions['block']['blocks'] as $key => $value) {
+          if ($key == 'nodeblock-172') {
+            $context->reactions['block']['blocks']['house_thomas_bill_search-house_thomas_bill_search'] = array(
+              'module' => 'house_thomas_bill_search',
+              'delta' => 'house_thomas_bill_search',
+              'region' => $value['region'],
+              'weight' => $value['weight'],
+            );
+            unset($context->reactions['block']['blocks']['nodeblock-172']);
+            if (context_save($context)) {
+              $delete_node = TRUE;
+              $ret[] = array(
+                'success' => TRUE,
+                'query' => 'Replaced nodeblock with module block. Deleted Thomas Bill Search node.',
+              );
+            }
+          }
+        }
+      }
+      if ($delete_node) {
+        node_delete(172);
+      }
+      if (empty($ret)) {
+        $ret[] = array(
+          'success' => TRUE,
+          'query' => 'Did not do anything. That means success.',
+        );
+      }
+      return $ret;
+    }
+  }
+}

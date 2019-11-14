@@ -1,0 +1,248 @@
+/************************************************************
+MALONEY CYCLE 11
+************************************************************/
+
+
+
+
+#zone-branding-wrapper {
+    background: none repeat scroll 0 0 #fff;
+    height: 75px;
+    margin-top: 0;
+	box-shadow: 1px 1px 3px #0097DA;
+    position: fixed;
+    z-index: 980;
+}
+#zone-branding {
+	margin-top: 6px;
+    margin-left: 9%;
+    margin-right: 0;
+    width: 100%;
+}
+.logo-img {
+    float: left;
+    margin-right: 20px;
+    margin-top: 7px;
+}
+#section-content{
+  padding-top: 65px;
+}
+.not-front #section-content{
+  padding-top: 92px;
+}
+
+#region-branding {
+	margin-right: 0;
+	width:19%;
+}
+
+#region-menu {
+	margin-right: 0;
+	width: 650px;
+}
+
+#region-user-first {
+	position: relative;
+    top: 0;
+	margin-left: 0;
+    margin-right: 0;
+    width: 170px;
+}
+
+#region-sidebar-first {
+}
+
+
+.block-s-cng-medium-profile {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 35px;
+}
+#block-boxes-social-media-large{
+	background: none repeat scroll transparent;
+	margin-bottom:20px;
+	padding:0;
+}
+#widgets-element-cng_large_profile {
+	float: right;
+}
+
+#block-boxes-email-button {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	margin-left: 0;
+    margin-bottom: 0;
+	width: 100%;
+}
+#block-boxes-email-button img{
+}
+
+#signup-email {
+	margin-right: 5px;
+    width: 65%;
+}
+#required-zip5 {
+	width: 30%;
+}
+#zip4 {
+	width: 30%;
+}
+
+#emailForm .form-25 {
+    float: left;
+    margin-right: 1%;
+    padding: 1% 0;
+    width: 43%;
+}
+
+.not-front #required-zip5 {
+	width: 71%;
+}
+.not-front #zip4 {
+	width: 71%;
+}
+
+/* MAIN MENU */
+
+#block-menu-block-congress-main-menu-superfish {
+    background: none repeat scroll 0 0 #transparent;
+    height: 34px;
+}
+
+#block-menu-block-congress-main-menu-superfish .sf-menu a {
+    padding: 1em;
+}
+
+#block-menu-block-congress-main-menu-superfish .sf-menu a {
+    font-weight:bold;
+	color: #565B6A;
+	font-size: 1em;
+}
+
+
+#block-menu-block-congress-main-menu-superfish .sf-menu li.sfHover > ul, .sf-menu li:hover > ul {
+    left: -0.02em;
+    top: 3em;
+}
+#block-menu-block-congress-main-menu-superfish .sf-menu li .leaf a:hover {
+    background: none repeat scroll 0 0 #2C89C6;
+	color: #ffffff;
+}
+
+#block-menu-block-congress-main-menu-superfish .sf-menu li.last.leaf {
+    padding-bottom: 0;
+}
+
+.sf-menu li.menu-about .last.leaf {
+    background: none no-repeat scroll center bottom rgba(0, 0, 0, 0);
+}
+
+.sf-menu li.menu-contact .last.leaf  {
+    background: none no-repeat scroll center bottom rgba(0, 0, 0, 0);
+}
+.sf-menu li.menu-services .last.leaf  {
+    background: none no-repeat scroll center bottom rgba(0, 0, 0, 0);
+}
+.sf-menu li.menu-media-center .last.leaf  {
+    background: none no-repeat scroll center bottom rgba(0, 0, 0, 0);
+}
+.sf-menu li.menu-issues .last.leaf  {
+    background: none no-repeat scroll center bottom rgba(0, 0, 0, 0);
+}
+.sf-menu li.menu-issues .last.leaf {
+    background: none no-repeat scroll center bottom rgba(0, 0, 0, 0);
+}
+#block-menu-block-congress-main-menu-superfish .sf-menu li .leaf a{
+	font-weight:normal;
+	font-size: 0.9em;
+}
+#block-menu-block-congress-main-menu-superfish .sf-menu li.menu-issues .last.leaf a{
+	background: none no-repeat scroll center bottom #ededed;
+	color:#255288;
+}
+#block-menu-block-congress-main-menu-superfish .sf-menu li.menu-issues .last.leaf a{
+	font-weight:bold;
+	font-size: 0.9em;
+}
+
+.sf-menu ul {
+    border-bottom: 3px solid #2C89C6;
+    box-shadow: 5px 5px 5px -3px #000000;
+    width: 300px !important;
+}
+
+#block-menu-block-congress-main-menu-superfish .sf-menu li{
+    border-left: none;
+}
+
+#zone-header-wrapper {
+    background: url("../images/eastside-skyline-2.jpg") no-repeat scroll center center #000000;
+    height: 500px;
+    margin: 0;
+    background-size: cover;
+}
+
+
+
+
+#block-boxes-rep-logo {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    position: relative;
+    top: 20px;
+    width: 979px;
+    z-index: 200;
+}
+
+
+#search-block-form .form-item input {
+	width: 82%;
+}
+
+
+#block-boxes-live-in-district input[type="submit"] {
+    float: right;
+    overflow: hidden;
+    white-space: normal;
+}
+#block-boxes-live-in-district .wsbform label {
+	color: #333333;
+	display: inline-block;
+}
+
+#block-boxes-about-contact {
+    background: none repeat scroll 0 0 transparent;
+	position: relative;
+    right: 188px;
+    top: 233px;
+    width: 114%;
+	z-index: 400;
+}
+
+#block-views-congress-offices-of-noslide .views-row {
+	color: #ffffff;
+    font-size: 0.9em;
+    padding: 0 1%;
+	width: 21%;
+}
+
+.faq li{
+	display: inline-block;
+    float: left;
+	font-size:16px;
+    height: 93px;
+    list-style: none outside none;
+    margin-bottom: 30px;
+    margin-right: 4%;
+    width: 29%;
+}
+/*Google Translate*/
+
+#boxes-box-google_translate {
+	top: -10px;
+    position: relative;
+}
+
+#zone-branding {
+    margin-top: 6px;
+    margin-left: 3%;
+    margin-right: 0;
+    width: 100%;
+}

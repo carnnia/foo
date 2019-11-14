@@ -1,0 +1,28 @@
+<?php
+//Max.Rakhimov
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the House Optional Blocks module.
+ */
+
+/**
+ * Implements hook_install()
+ */
+function house_optional_blocks_install() {
+  house_optional_blocks_update_7100();
+}
+
+/**
+ * Adds Addthis custom block to sitewide context.
+ */
+function house_optional_blocks_update_7100() {
+  $context = context_load('sitewide');
+  $context->reactions['block']['blocks']['house_optional_blocks-house_addthis'] = array(
+    'module' => 'house_optional_blocks',
+    'delta' => 'house_addthis',
+    'region' => 'highlighted',
+    'weight' => -10,
+  );
+  context_save($context);
+}

@@ -1,0 +1,84 @@
+/************************************************************
+MALONEY CYCLE 11
+************************************************************/
+
+.not-front #section-content{
+  padding-top: 110px;
+}
+#zone-branding {
+    margin-left: 0;
+}
+#zone-branding-wrapper {
+    height: 100px;
+}
+#region-branding {
+    width: 55%;
+}
+#region-menu {
+	width: 600px;
+	 width: 54%;
+}
+#region-user-first {
+	width: 154px;
+}
+
+#block-boxes-email-button {
+    margin-left: 2%;
+	width:100%
+}
+
+#block-boxes-rep-logo {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+ 
+    width: 979px;
+	z-index: 200;
+}
+
+
+
+#block-menu-block-congress-main-menu-superfish .sf-menu a {
+    padding: 1em 0.6em;
+}
+#block-menu-block-congress-main-menu-superfish .sf-menu a {
+	font-size: 1em;
+}
+#block-menu-block-congress-main-menu-superfish .sf-menu li.sfHover > ul, .sf-menu li:hover > ul {
+    left: -0.02em;
+    top: 2.7em;
+}
+#block-boxes-about-contact {
+    right: 149px;
+}
+
+#search-block-form .form-item input {
+    width: 75%;
+}
+#block-boxes-live-in-district input[type="submit"] {
+    left: -2%;
+}
+#signup-email {
+    width: 57%;
+}
+#required-zip5 {
+	width: 25%;
+}
+#zip4 {
+	width: 25%;
+}
+#emailForm .form-25 {
+    width: 45%;
+}
+
+
+.faq li {
+    font-size: 14px;
+    width: 40%;
+}
+
+/*GOOGLE TRANSLATE*/
+
+
+
+.a .email-btn {
+	
+}

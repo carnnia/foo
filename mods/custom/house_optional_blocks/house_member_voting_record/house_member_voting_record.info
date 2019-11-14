@@ -1,0 +1,14 @@
+name = House Member Voting Record
+description = Provides functionality to display voting record of a Representative in a block.
+package = House Optional Blocks
+core = 7.x
+files[] = house_member_voting_record.module
+configure = admin/config/house/house_member_voting_record
+version = "7.x-1.0"
+
+
+; Information added by drush on 2012-07-03
+version = "RELEASE-V20120619-3"
+project = "house"
+datestamp = "1341347286"
+

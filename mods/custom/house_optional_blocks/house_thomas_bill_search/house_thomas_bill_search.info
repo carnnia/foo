@@ -1,0 +1,13 @@
+name = House Thomas Bill Search
+description = Provides a block to search Library of Congress for a bill by number or keyword.
+package = House Optional Blocks
+core = 7.x
+files[] = house_thomas_bill_search.module
+version = "7.x-1.0"
+
+
+; Information added by drush on 2012-07-03
+version = "RELEASE-V20120619-3"
+project = "house"
+datestamp = "1341347286"
+
